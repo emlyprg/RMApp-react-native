@@ -1,0 +1,37 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/ChakraPetch-Bold.ttf",
+      "sha1": "2ac71b32044a6325b1c7042583099b3c743f78ac"
+    },
+    {
+      "path": "src/assets/fonts/ChakraPetch-Light.ttf",
+      "sha1": "9349cfaaad8e5b443f959f9ec85d06cfa14bfaf2"
+    },
+    {
+      "path": "src/assets/fonts/ChakraPetch-Medium.ttf",
+      "sha1": "47c2adf99cc286e5e2c8394185f0738878c5c504"
+    },
+    {
+      "path": "src/assets/fonts/ChakraPetch-Regular.ttf",
+      "sha1": "934a68bd78f594e3c6eed5258322bd4da514a22a"
+    },
+    {
+      "path": "src/assets/fonts/Montserrat-Bold.ttf",
+      "sha1": "98c66622226025f539568865af96df5175e2979c"
+    },
+    {
+      "path": "src/assets/fonts/Montserrat-Light.ttf",
+      "sha1": "9dfbddad5025d8d224b4939e54c1a4ac8ac6015b"
+    },
+    {
+      "path": "src/assets/fonts/Montserrat-Medium.ttf",
+      "sha1": "25c429296b9d6eb242cba92d1ee7fae484b019cb"
+    },
+    {
+      "path": "src/assets/fonts/Montserrat-Regular.ttf",
+      "sha1": "bb895d19b8a1fbe1c57fc89cac5da82fdc8fdef4"
+    }
+  ]
+}
