@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../constants/colors';
+import {colors} from '../constants/colors';
 
 export const CharactersListStyle = StyleSheet.create({
   listTitle: {
@@ -7,9 +7,9 @@ export const CharactersListStyle = StyleSheet.create({
     textAlign: 'center',
     marginTop: 12,
     fontWeight: 'bold',
-    color: colors.Green,
-    textShadowColor: 'rgba(232,154,199, 0.7)',
-    textShadowOffset: {width: -1, height: 2},
+    color: colors.LightGreen,
+    textShadowColor: 'rgba(255,255,255, 0.7)',
+    textShadowOffset: {width: -2, height: 3},
     textShadowRadius: 10,
   },
   cardContainer: {

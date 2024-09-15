@@ -1,8 +1,10 @@
 import React from 'react';
-import {CharactersListPage} from './src/pages/CharactersListPage';
+import {CharacterDetailsPage} from './src/pages/CharacterDetailsPage';
+import {mock} from './src/components/mock';
 
 const App = () => {
-  return <CharactersListPage />;
+  return <CharacterDetailsPage character={mock} />;
+  // return <CharactersListPage />;
 };
 
 export default App;
