@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList, ImageBackground, Text, View} from 'react-native';
-import {CharacterCard} from '../../components/CharacterCard/CharacterCard';
+import {CharacterCard} from '../CharacterCard';
 import {CharactersListGridStyle} from './styles';
 import {Character} from '../../types/Character';
 
