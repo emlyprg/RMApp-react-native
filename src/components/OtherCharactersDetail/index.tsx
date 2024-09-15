@@ -1,16 +1,10 @@
 import React from 'react';
 import {useState} from 'react';
 import {FlatList, Image, Modal, Pressable, Text, View} from 'react-native';
-import {Character} from '../../types/Character';
+import {CharactersListProp} from '../../types/Character';
 import {OtherCharactersDetailStyle} from './styles';
 
-interface OtherCharactersDetailProps {
-  characters: Character[];
-}
-
-export const OtherCharactersDetail = ({
-  characters,
-}: OtherCharactersDetailProps) => {
+export const OtherCharactersDetail = ({characters}: CharactersListProp) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (

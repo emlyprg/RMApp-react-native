@@ -30,3 +30,11 @@ export interface Character {
   url: string;
   created: string;
 }
+
+export interface SingleCharacterProp {
+  character: Character;
+}
+
+export interface CharactersListProp {
+  characters: Character[];
+}

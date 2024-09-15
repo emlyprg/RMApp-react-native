@@ -2,11 +2,9 @@ import React from 'react';
 import {Image, Pressable, Text, View} from 'react-native';
 import {getEpisodesNumbers} from '../../utils/getEpisodesNumbers';
 import {colors} from '../../constants/colors';
-import {Character, Status} from '../../types/Character';
+import {SingleCharacterProp, Status} from '../../types/Character';
 import {CharacterCardStyle} from './styles';
-interface CharacterCardProps {
-  character: Character;
-}
+import {FavoriteCharacterButton} from '../FavoriteCharacterButton';
 
 const statusColor = {
   [Status.ALIVE]: colors.DarkGreen,
@@ -14,7 +12,7 @@ const statusColor = {
   [Status.UNKNOWN]: colors.Gray,
 };
 
-export const CharacterCard = ({character}: CharacterCardProps) => {
+export const CharacterCard = ({character}: SingleCharacterProp) => {
   return (
     <View style={CharacterCardStyle.container}>
       <Image source={{uri: character.image}} style={CharacterCardStyle.image} />
@@ -48,7 +46,7 @@ export const CharacterCard = ({character}: CharacterCardProps) => {
 
       <View style={CharacterCardStyle.propertyRow}>
         <Text style={CharacterCardStyle.propertyLabel}>Location:</Text>
-        <Text style={CharacterCardStyle.propertyValue}>
+        <Text numberOfLines={1} style={CharacterCardStyle.propertyValue}>
           {character.location.name}
         </Text>
       </View>
@@ -61,6 +59,8 @@ export const CharacterCard = ({character}: CharacterCardProps) => {
       <Pressable style={CharacterCardStyle.seeMoreButton} onPress={() => true}>
         <Text style={CharacterCardStyle.seeMoreButtonLabel}>See more</Text>
       </Pressable>
+
+      <FavoriteCharacterButton character={character} />
     </View>
   );
 };

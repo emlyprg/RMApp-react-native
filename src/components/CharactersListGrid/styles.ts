@@ -21,6 +21,6 @@ export const CharactersListGridStyle = StyleSheet.create({
     alignItems: 'center',
   },
   gridContainer: {
-    margin: 16,
+    margin: 10,
   },
 });

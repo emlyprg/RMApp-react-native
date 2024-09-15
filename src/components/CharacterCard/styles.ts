@@ -39,6 +39,7 @@ export const CharacterCardStyle = StyleSheet.create({
   },
   propertyValue: {
     color: colors.Black,
+    width: 90,
   },
   seeMoreButton: {
     marginHorizontal: 8,

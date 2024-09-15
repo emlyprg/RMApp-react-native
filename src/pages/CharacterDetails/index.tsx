@@ -1,19 +1,13 @@
 import React from 'react';
 import {Image, ScrollView, Text, View} from 'react-native';
-import {Character} from '../../types/Character';
+import {SingleCharacterProp} from '../../types/Character';
 import {formatDate} from '../../utils/formatDate';
 import {mockedCharacters, mockedEpisodes} from '../../mock';
 import {DefaultText} from '../../components/DefaultText';
 import {EpisodeDetail} from '../../components/EpisodeDetail';
 import {CharacterDetailsPageStyle} from './styles';
 
-interface CharacterDetailsPageProps {
-  character: Character;
-}
-
-export const CharacterDetailsPage = ({
-  character,
-}: CharacterDetailsPageProps) => {
+export const CharacterDetailsPage = ({character}: SingleCharacterProp) => {
   return (
     <ScrollView style={CharacterDetailsPageStyle.pageContainer}>
       <Text style={CharacterDetailsPageStyle.pageTitle}>{character.name}</Text>

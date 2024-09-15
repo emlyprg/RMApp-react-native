@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList, ImageBackground, Text, View} from 'react-native';
-import {Character} from '../../types/Character';
+import {CharactersListProp} from '../../types/Character';
 import {CharacterCard} from '../CharacterCard';
 import {CharactersListGridStyle} from './styles';
 
@@ -8,8 +8,7 @@ const imagePath = {
   uri: 'https://png.pngtree.com/background/20210715/original/pngtree-star-space-universe-space-infinite-background-picture-image_1303830.jpg',
 };
 
-interface CharactersListGridProps {
-  characters: Character[];
+interface CharactersListGridProps extends CharactersListProp {
   pageTitle: string;
 }
 

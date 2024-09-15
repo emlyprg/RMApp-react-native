@@ -1,12 +1,11 @@
 import React from 'react';
 import {View} from 'react-native';
 import {DefaultText} from './DefaultText';
-import {Character} from '../types/Character';
+import {CharactersListProp} from '../types/Character';
 import {OtherCharactersDetail} from './OtherCharactersDetail';
 
-interface EpisodeDetailProps {
+interface EpisodeDetailProps extends CharactersListProp {
   name: string;
-  characters: Character[];
 }
 
 export const EpisodeDetail = ({name, characters}: EpisodeDetailProps) => (

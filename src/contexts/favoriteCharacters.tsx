@@ -1,7 +1,14 @@
 import {createContext, PropsWithChildren, useContext, useState} from 'react';
 import {Character} from '../types/Character';
 
-export const FavoriteCharactersContext = createContext({});
+interface ContextType {
+  favoriteCharacters: Character[];
+  addToFavorites: (newCharacter: Character) => void;
+  removeFromFavorites: (id: number) => void;
+  getIsAddedToFavorites: (id: number) => boolean;
+}
+
+export const FavoriteCharactersContext = createContext({} as ContextType);
 
 export const FavoriteCharactersProvider = ({children}: PropsWithChildren) => {
   const [favoriteCharacters, setFavoriteCharacters] = useState<Character[]>([]);
