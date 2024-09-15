@@ -1,7 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
 import {FlatList, Image, Modal, Pressable, Text, View} from 'react-native';
-import {colors} from '../../constants/colors';
 import {Character} from '../../types/Character';
 import {OtherCharactersDetailStyle} from './styles';
 
@@ -20,27 +19,16 @@ export const OtherCharactersDetail = ({
         animationType="slide"
         visible={modalVisible}
         onRequestClose={() => setModalVisible(false)}>
-        <View
-          style={{
-            padding: 16,
-            backgroundColor: colors.White,
-          }}>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginBottom: 10,
-            }}>
-            <Text
-              style={{color: colors.Gray, fontSize: 28, fontWeight: 'bold'}}>
+        <View style={OtherCharactersDetailStyle.container}>
+          <View style={OtherCharactersDetailStyle.titleContainer}>
+            <Text style={OtherCharactersDetailStyle.modalTitle}>
               Other characters
             </Text>
 
             <Pressable
               onPress={() => setModalVisible(false)}
               style={OtherCharactersDetailStyle.closeModalButton}>
-              <Text style={{color: colors.White, fontWeight: 'bold'}}>
+              <Text style={OtherCharactersDetailStyle.closeButtonText}>
                 Close
               </Text>
             </Pressable>
@@ -50,23 +38,13 @@ export const OtherCharactersDetail = ({
             data={characters}
             numColumns={3}
             renderItem={({item}) => (
-              <View style={{margin: 10}}>
+              <View style={OtherCharactersDetailStyle.characterItemContainer}>
                 <Image
                   key={item.id}
                   source={{uri: item.image}}
-                  style={{
-                    width: 100,
-                    height: 100,
-                    borderRadius: 8,
-                    marginBottom: 2,
-                  }}
+                  style={OtherCharactersDetailStyle.characterImage}
                 />
-                <Text
-                  style={{
-                    color: colors.Brown,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                  }}>
+                <Text style={OtherCharactersDetailStyle.characterName}>
                   {item.name}
                 </Text>
               </View>
@@ -78,7 +56,7 @@ export const OtherCharactersDetail = ({
       <Pressable
         onPress={() => setModalVisible(true)}
         style={OtherCharactersDetailStyle.openModalButton}>
-        <Text style={{color: colors.Brown, fontWeight: 'bold'}}>
+        <Text style={OtherCharactersDetailStyle.openModalButtonText}>
           See other characters
         </Text>
       </Pressable>

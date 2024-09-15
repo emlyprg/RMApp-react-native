@@ -30,4 +30,6 @@ export const CharacterDetailsPageStyle = StyleSheet.create({
     paddingBottom: 8,
     paddingTop: 16,
   },
+  characterDetailsContainer: {gap: 5},
+  episodesContainer: {gap: 2, paddingBottom: 50},
 });

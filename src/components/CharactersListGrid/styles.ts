@@ -2,6 +2,8 @@ import {StyleSheet} from 'react-native';
 import {colors} from '../../constants/colors';
 
 export const CharactersListGridStyle = StyleSheet.create({
+  container: {flex: 1},
+  imageBackground: {flex: 1, justifyContent: 'center'},
   listTitle: {
     fontSize: 32,
     textAlign: 'center',
@@ -17,5 +19,8 @@ export const CharactersListGridStyle = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  gridContainer: {
+    margin: 16,
   },
 });

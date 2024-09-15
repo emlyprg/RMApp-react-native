@@ -25,7 +25,7 @@ export const CharacterDetailsPage = ({
 
       <Text style={CharacterDetailsPageStyle.subtitle}>Character Details</Text>
 
-      <View style={{gap: 5}}>
+      <View style={CharacterDetailsPageStyle.characterDetailsContainer}>
         <DefaultText content={`Type ${character.type}`} />
         <DefaultText content={`Status ${character.status}`} />
         <DefaultText content={`${character.species}`} />
@@ -39,7 +39,7 @@ export const CharacterDetailsPage = ({
 
       <DefaultText content={`${character.episode.length} episodes`} />
 
-      <View style={{gap: 2, paddingBottom: 50}}>
+      <View style={CharacterDetailsPageStyle.episodesContainer}>
         {mockedEpisodes.map(({name, id}) => (
           <EpisodeDetail name={name} characters={mockedCharacters} key={id} />
         ))}
