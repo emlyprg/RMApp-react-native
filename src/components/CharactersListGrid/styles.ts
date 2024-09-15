@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../constants/colors';
+import {colors} from '../../constants/colors';
 
-export const CharactersListStyle = StyleSheet.create({
+export const CharactersListGridStyle = StyleSheet.create({
   listTitle: {
     fontSize: 32,
     textAlign: 'center',

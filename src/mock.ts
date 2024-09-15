@@ -1,6 +1,6 @@
 import {Gender, Status} from './types/Character';
 
-export const mock = {
+export const mockedSingleCharacter = {
   id: 361,
   name: 'Toxic Rick',
   status: Status.UNKNOWN,

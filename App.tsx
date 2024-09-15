@@ -1,10 +1,9 @@
 import React from 'react';
-import {CharacterDetailsPage} from './src/pages/CharacterDetailsPage';
-import {mock} from './src/components/mock';
+import {CharacterDetailsPage} from './src/pages/CharacterDetails';
+import {mockedSingleCharacter} from './src/mock';
 
 const App = () => {
-  return <CharacterDetailsPage character={mock} />;
-  // return <CharactersListPage />;
+  return <CharacterDetailsPage character={mockedSingleCharacter} />;
 };
 
 export default App;

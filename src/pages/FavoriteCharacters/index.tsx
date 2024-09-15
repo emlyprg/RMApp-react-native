@@ -1,10 +1,10 @@
 import React from 'react';
 import {Text, ViewComponent} from 'react-native';
 
-export const FavoritesPage = () => {
+export const FavoriteCharactersPage = () => {
   return (
     <ViewComponent>
-      <Text>Favoritos</Text>
+      <Text>My Favorite Characters</Text>
     </ViewComponent>
   );
 };

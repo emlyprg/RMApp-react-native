@@ -1,9 +1,9 @@
 import React from 'react';
 import {useState} from 'react';
 import {FlatList, Image, Modal, Pressable, Text, View} from 'react-native';
-import {colors} from '../constants/colors';
-import {Character} from './types/Character';
-import {OtherCharactersDetailStyle} from '../styles/OtherCharactersDetail';
+import {colors} from '../../constants/colors';
+import {Character} from '../../types/Character';
+import {OtherCharactersDetailStyle} from './styles';
 
 interface OtherCharactersDetailProps {
   characters: Character[];

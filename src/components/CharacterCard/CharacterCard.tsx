@@ -1,9 +1,9 @@
 import React from 'react';
 import {Image, Pressable, Text, View} from 'react-native';
-import {Character, Status} from './types/Character';
-import {CharacterCardStyle} from '../styles/CharacterCard';
-import {colors} from '../constants/colors';
-import {getEpisodesNumbers} from '../utils/getEpisodesNumbers';
+import {getEpisodesNumbers} from '../../utils/getEpisodesNumbers';
+import {colors} from '../../constants/colors';
+import {Character, Status} from '../../types/Character';
+import {CharacterCardStyle} from './styles';
 interface CharacterCardProps {
   character: Character;
 }

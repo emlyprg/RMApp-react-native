@@ -1,31 +1,37 @@
 import React from 'react';
 import {FlatList, ImageBackground, Text, View} from 'react-native';
-import {CharactersListStyle} from '../styles/CharactersList';
-import {mockedCharacters} from '../components/mock';
-import {CharacterCard} from '../components/CharacterCard';
+import {CharacterCard} from '../../components/CharacterCard/CharacterCard';
+import {CharactersListGridStyle} from './styles';
+import {Character} from '../../types/Character';
 
 const imagePath = {
   uri: 'https://png.pngtree.com/background/20210715/original/pngtree-star-space-universe-space-infinite-background-picture-image_1303830.jpg',
 };
 
-export const CharactersListPage = () => {
+interface CharactersListGridProps {
+  characters: Character[];
+  pageTitle: string;
+}
+
+export const CharactersListGrid = ({
+  characters,
+  pageTitle,
+}: CharactersListGridProps) => {
   return (
     <View style={{flex: 1}}>
       <ImageBackground
         source={imagePath}
         resizeMode="cover"
         style={{flex: 1, justifyContent: 'center'}}>
-        <Text style={CharactersListStyle.listTitle}>
-          Rick <Text style={{fontSize: 24}}>and</Text> Morty Characters
-        </Text>
+        <Text style={CharactersListGridStyle.listTitle}>{pageTitle}</Text>
 
         <FlatList
           style={{margin: 16}}
-          data={mockedCharacters}
+          data={characters}
           numColumns={2}
           keyExtractor={(item, index) => item.id + `${index}`}
           renderItem={({item}) => (
-            <View style={CharactersListStyle.cardContainer}>
+            <View style={CharactersListGridStyle.cardContainer}>
               <CharacterCard character={item} />
             </View>
           )}

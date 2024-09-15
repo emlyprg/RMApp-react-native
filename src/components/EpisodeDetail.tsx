@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import {DefaultText} from './DefaultText';
-import {Character} from './types/Character';
+import {Character} from '../types/Character';
 import {OtherCharactersDetail} from './OtherCharactersDetail';
 
 interface EpisodeDetailProps {
